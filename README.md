@@ -3,8 +3,8 @@
 > [!WARNING]
 > This is a pulbic repository, do **NOT** include passwords, personnal information or important env. variables here.
 
-## Use this template
-To create a new workspace based on this template, click [here](https://idx.google.com/new?template=https://github.com/sg-nucleus6/idx-template-python)
+## How to use the templates
+- Each folder is a different template and its README.md files have instructions.
 
 ## Links
 - Official Template [:link:](https://github.com/project-idx/templates/tree/main)
