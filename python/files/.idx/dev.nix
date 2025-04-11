@@ -42,7 +42,11 @@
       # Runs when a workspace is first created
       onCreate = {
         install =
-          "pip install --upgrade pip && python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && exit";
+          "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && exit";
+        clone =
+          "git clone https://github.com/Kinto/kinto.git && exit";
+        move =
+          "mv kinto tmp_to_delete && mv tmp_to_delete/* tmp_to_delete/.* . && rm -rf tmp_to_delete && exit";
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
