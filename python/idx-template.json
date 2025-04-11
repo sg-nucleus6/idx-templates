@@ -1,6 +1,6 @@
 {
     "name": "Python template",
     "description": "A custom IDX (Firebase Studio) template for Python",
-    "icon": "/files/.idx/icon.png",
+    "icon": "https://www.python.org/static/favicon.ico",
     "params": []
 }
