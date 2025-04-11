@@ -10,7 +10,7 @@
   ];
   # Sets environment variables in the workspace
   env = {
-    USER_AGENT = "IMPORTANT important@nucleus6.com";
+    # USER_AGENT = "";
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
