@@ -6,6 +6,6 @@
         "id": "git",
         "name": "Github repo URL",
         "type": "text",        
-        "required": true
+        "required": false
     ]
 }
