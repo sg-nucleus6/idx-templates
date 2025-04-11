@@ -41,8 +41,8 @@
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
-        install =
-          "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt";
+        # install =
+          # "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt";
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
@@ -52,6 +52,8 @@
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
+        install =
+          "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt";
       };
     };
   };
