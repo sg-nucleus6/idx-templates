@@ -42,11 +42,11 @@
       # Runs when a workspace is first created
       onCreate = {
         install =
-          "python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && exit";
+          "echo install-start $(date) && python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && echo install-end $(date) && exit";
         clone =
-          "git clone https://github.com/Kinto/kinto.git && exit";
+          "echo clone-start $(date) && git clone https://github.com/Kinto/kinto.git && echo clone-end $(date) && exit";
         move =
-          "mv kinto tmp_to_delete && mv tmp_to_delete/* tmp_to_delete/.* . && rm -rf tmp_to_delete && exit";
+          "echo move-start $(date) && mv kinto tmp_to_delete && mv tmp_to_delete/* tmp_to_delete/.* . && rm -rf tmp_to_delete && echo move-end $(date) && exit";
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
