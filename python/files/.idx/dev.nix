@@ -42,7 +42,7 @@
       # Runs when a workspace is first created
       onCreate = {
         install =
-          "echo install-start $(date) && python -m venv .venv && source .venv/bin/activate && echo install-end $(date) && echo clone-start $(date) && git clone https://github.com/Kinto/kinto.git && echo clone-end $(date) echo move-start $(date) && mv kinto tmp_to_delete && mv tmp_to_delete/* tmp_to_delete/.* . && rm -rf tmp_to_delete && echo move-end $(date) && exit";
+          "echo install-start $(date) && python -m venv .venv && source .venv/bin/activate && echo install-end $(date) && echo clone-start $(date) && git clone https://github.com/Kinto/kinto.git && echo clone-end $(date) echo move-start $(date) && mv kinto tmp_to_delete && mv tmp_to_delete/* tmp_to_delete/.* . && rm -rf tmp_to_delete && echo move-end $(date) && exit 0";
         # clone =
           # "echo clone-start $(date) && git clone https://github.com/Kinto/kinto.git && echo clone-end $(date) && exit";
         # move =
