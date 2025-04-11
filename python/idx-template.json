@@ -6,8 +6,7 @@
         {
             "id": "git",
             "name": "Github repo URL",
-            "type": "text",        
-            "required": true
+            "type": "text",
             "required": false
         }
      ]
