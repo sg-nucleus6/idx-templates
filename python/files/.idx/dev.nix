@@ -15,8 +15,8 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      "googlecloudtools.cloudcode"
       "google.geminicodeassist"
+      "googlecloudtools.cloudcode"      
       "ms-python.autopep8"
       "ms-python.debugpy"
       "ms-python.python"
