@@ -1,4 +1,4 @@
-{ pkgs, git ? '', ... }: {
+{ pkgs, git ? "", ... }: {
   # Shell script that produces the final environment
   bootstrap = ''
     cp -rf ${./.}/files "$WS_NAME"
