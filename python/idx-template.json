@@ -2,10 +2,15 @@
     "name": "Python template",
     "description": "A custom IDX (Firebase Studio) template for Python",
     "icon": "https://www.python.org/static/favicon.ico",
-    "params": [
-        "id": "git",
-        "name": "Github repo URL",
-        "type": "text",        
-        "required": false
-    ]
+    "params": {
+        "id": "language",
+        "name": "Programming Language",
+        "type": "enum",
+        "default": "ts",
+        "options": {
+            "js": "JavaScript",
+            "ts": "TypeScript"
+        },
+        "required": true
+    }
 }
