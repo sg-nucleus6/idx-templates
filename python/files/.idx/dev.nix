@@ -54,7 +54,7 @@
           rm -rf tmp_to_delete 
           echo move-end $(date) 
           exit 0
-        ''
+        '';
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
         # Open editors for the following files by default, if they exist:
