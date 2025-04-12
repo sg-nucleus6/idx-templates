@@ -45,16 +45,17 @@
           python -m venv .venv
           source .venv/bin/activate
 
-          repo_url="https://github.com/Kinto/kinto.git"
-          git clone $repo_url          
-          
-          filename=$\{repo_url##*/}
-          extension=$\{filename##*.}
-          result=$\{filename%.$\{extension}}
-
-          mv $result tmp_folder_to_delete_soon_after
-          mv tmp_folder_to_delete_soon_after/* tmp_folder_to_delete_soon_after/.* .
-          rm -rf tmp_folder_to_delete_soon_after
+          git clone ${repoURL}          
+          filename=${
+            let 
+              baseName = builtins.baseNameOf repoURL;              
+              tmpList = builtins.split "\." baseName;
+              fileName = builtins.elemAt tmpList 0;
+            in {
+              result = fileName;
+            }
+          }
+          echo $filename          
           
           exit 0
         '';
