@@ -45,7 +45,8 @@
           python -m venv .venv
           source .venv/bin/activate
 
-          git clone ${repoURL}          
+          echo ${repoURL}
+          git clone ${repoURL}
           filename=${
             let 
               baseName = builtins.baseNameOf repoURL;              
