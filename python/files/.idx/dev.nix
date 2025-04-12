@@ -46,16 +46,16 @@
           source .venv/bin/activate
 
           repo_url="https://github.com/Kinto/kinto.git"
-          git clone $repo_url
+          git clone $repo_url          
+          
+          filename=$\{repo_url##*/}
+          extension=$\{filename##*.}
+          result=$\{filename%.$\{extension}}
 
-          filename=${repo_url##*/}
-          extension=${filename##*.}
-          result=${filename%.${extension}}
-
-          mv $kinto tmp_folder_to_delete_soon_after
+          mv $result tmp_folder_to_delete_soon_after
           mv tmp_folder_to_delete_soon_after/* tmp_folder_to_delete_soon_after/.* .
           rm -rf tmp_folder_to_delete_soon_after
-
+          
           exit 0
         '';
         # Example: install JS dependencies from NPM
