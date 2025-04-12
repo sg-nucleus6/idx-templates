@@ -42,17 +42,20 @@
       # Runs when a workspace is first created
       onCreate = {
         install = ''
-          echo install-start $(date) 
-          python -m venv .venv 
-          source .venv/bin/activate 
-          echo install-end $(date) 
-          echo clone-start $(date) 
-          git clone https://github.com/Kinto/kinto.git 
-          echo clone-end $(date) echo move-start $(date) 
-          mv kinto tmp_to_delete 
-          mv tmp_to_delete/* tmp_to_delete/.* . 
-          rm -rf tmp_to_delete 
-          echo move-end $(date) 
+          python -m venv .venv
+          source .venv/bin/activate
+
+          repo_url="https://github.com/Kinto/kinto.git"
+          git clone $repo_url
+
+          filename=${repo_url##*/}
+          extension=${filename##*.}
+          result=${filename%.${extension}}
+
+          mv $kinto tmp_folder_to_delete_soon_after
+          mv tmp_folder_to_delete_soon_after/* tmp_folder_to_delete_soon_after/.* .
+          rm -rf tmp_folder_to_delete_soon_after
+
           exit 0
         '';
         # Example: install JS dependencies from NPM
