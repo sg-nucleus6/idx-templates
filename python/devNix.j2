@@ -42,9 +42,9 @@
       # Runs when a workspace is first created
       onCreate = {
         install = ''
-          git clone {{repoURL}} folder_to_be_deleted
+          {% if repoURL %}git clone {{repoURL}} folder_to_be_deleted
           mv folder_to_be_deleted/* folder_to_be_deleted/.* .
-          rm -rf folder_to_be_deleted
+          rm -rf folder_to_be_deleted{% endif %}
 
           python -m venv .venv
           source .venv/bin/activate

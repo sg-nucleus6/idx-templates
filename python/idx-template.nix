@@ -8,12 +8,11 @@
     cp -rf ${./.}/files "$WS_NAME"
     chmod -R +w "$WS_NAME"
     
-
     repoURL=${repoURL} j2 ${./devNix.j2}  -o "$WS_NAME"/.idx/dev.nix
     nixfmt "$WS_NAME"/.idx/dev.nix
 
     mv "$WS_NAME" "$out"
-    
+
     # Remove the template files themselves and any connection to the template's
     # Git repository
     rm -rf "$out/.git" "$out/idx-template".{nix,json}
