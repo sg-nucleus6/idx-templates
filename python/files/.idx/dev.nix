@@ -45,18 +45,9 @@
           python -m venv .venv
           source .venv/bin/activate
 
-          echo ${repoURL}
-          git clone ${repoURL}
-          filename=${
-            let 
-              baseName = builtins.baseNameOf repoURL;              
-              tmpList = builtins.split "\." baseName;
-              fileName = builtins.elemAt tmpList 0;
-            in {
-              result = fileName;
-            }
-          }
-          echo $filename          
+          echo $repoURL
+          filename=\${repoURL##*/}
+          echo $filename
           
           exit 0
         '';
