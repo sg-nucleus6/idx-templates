@@ -42,13 +42,18 @@
       # Runs when a workspace is first created
       onCreate = {
         install = ''
+          git clone ${repoURL} folder_to_be_deleted
+          mv folder_to_be_deleted/* folder_to_be_deleted/.* .
+          rm -rf folder_to_be_deleted
+
           python -m venv .venv
           source .venv/bin/activate
 
-          echo $repoURL
-          filename=\$\{repoURL##*/}
-          echo $filename
-          
+          pip install --upgrade pip 
+          if test -f requirements.txt; then
+            pip install -r requirements.txt
+          fi
+
           exit 0
         '';
         # Example: install JS dependencies from NPM
