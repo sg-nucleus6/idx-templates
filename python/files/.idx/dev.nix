@@ -46,7 +46,7 @@
           source .venv/bin/activate
 
           echo $repoURL
-          filename=\${repoURL##*/}
+          filename=\$\{repoURL##*/}
           echo $filename
           
           exit 0
