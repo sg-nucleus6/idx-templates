@@ -42,7 +42,7 @@
       # Runs when a workspace is first created
       onCreate = {
         install = ''
-          git clone ${repoURL} folder_to_be_deleted
+          git clone https://github.com/Kinto/kinto folder_to_be_deleted
           mv folder_to_be_deleted/* folder_to_be_deleted/.* .
           rm -rf folder_to_be_deleted
 
