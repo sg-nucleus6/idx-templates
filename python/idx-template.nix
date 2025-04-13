@@ -9,7 +9,7 @@
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
 
-    reporURL=${repoURL} j2 ${./devNix.js}  -o "$WS_NAME"/.idx/dev.nix
+    reporURL=${repoURL} j2 ${./devNix.j2}  -o "$WS_NAME"/.idx/dev.nix
     nixfmt "$WS_NAME"/.idx/dev.nix
 
     # Remove the template files themselves and any connection to the template's
