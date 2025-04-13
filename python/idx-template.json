@@ -4,7 +4,7 @@
     "icon": "https://www.python.org/static/favicon.ico",
     "params": [
         {
-            "id": "git",
+            "id": "repoURL",
             "name": "Github repo URL",
             "type": "text",
             "required": false
