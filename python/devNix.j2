@@ -42,16 +42,16 @@
       # Runs when a workspace is first created
       onCreate = {
         install = ''
-          {% if repoURL %}git clone {{repoURL}} folder_to_be_deleted
+          {% if repoURL %}git clone --quiet {{repoURL}} folder_to_be_deleted
           mv folder_to_be_deleted/* folder_to_be_deleted/.* .
           rm -rf folder_to_be_deleted{% endif %}
 
           python -m venv .venv
           source .venv/bin/activate
 
-          pip install --upgrade pip 
+          pip install --quiet --upgrade pip 
           if test -f requirements.txt; then
-            pip install -r requirements.txt
+            pip install --quiet -r requirements.txt
           fi
 
           exit 0
