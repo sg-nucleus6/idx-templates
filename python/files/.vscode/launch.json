@@ -16,7 +16,7 @@
                 "debug-in-terminal"
             ],
             "env": {
-                "USER_AGENT": "SG sg@nucleus6.com"
+                // "USER_AGENT": "XX some_email@nucleus6.com"
             }
         }
     ]
