@@ -1,0 +1,11 @@
+{
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true,
+    "python.envFile": "${workspaceFolder}/.venv",
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml",
+        "editor.tabSize": 4
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.autopep8",
+}
