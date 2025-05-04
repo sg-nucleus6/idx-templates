@@ -4,8 +4,19 @@
     "python.envFile": "${workspaceFolder}/.venv",
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml",
-        "editor.tabSize": 4
+        "editor.tabSize": 4,        
     },
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.autopep8",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    },
 }
